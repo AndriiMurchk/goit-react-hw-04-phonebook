@@ -1,12 +1,9 @@
 
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 
-class Filter extends Component {
-
-  render() {
-    const { filter, onChangeFilter } = this.props
-
+const Filter = ({ filter, onChangeFilter }) => {
+  
     return (
       <label>
         <span>Find contacts by name</span>
@@ -18,12 +15,12 @@ class Filter extends Component {
         />
       </label>
     )
-  }
+  
 }
-
-export { Filter };
 
 Filter.propTypes = {
   onChangeFilter: PropTypes.func,
   filter: PropTypes.string.isRequired
 }
+
+export { Filter };
